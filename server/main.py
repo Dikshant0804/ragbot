@@ -5,7 +5,7 @@ from typing import List
 from server.modules.load_vectorstore import load_vectorstore
 from server.modules.llm import get_llm_chain
 from server.modules.query_handlers import query_chain
-from logger import logger
+from server.logger import logger
 
 app=FastAPI(title="RagBot2.0")
 
