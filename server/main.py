@@ -2,9 +2,9 @@ from fastapi import FastAPI,UploadFile,File,Form,Request
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from typing import List
-from modules.load_vectorstore import load_vectorstore
-from modules.llm import get_llm_chain
-from modules.query_handlers import query_chain
+from server.modules.load_vectorstore import load_vectorstore
+from server.modules.llm import get_llm_chain
+from server.modules.query_handlers import query_chain
 from logger import logger
 
 app=FastAPI(title="RagBot2.0")
@@ -45,7 +45,7 @@ async def ask_quyestion(question:str=Form(...)):
         logger.info("fuser query:{question}")
         from langchain_community.vectorstores import Chroma
         from langchain_community.embeddings import HuggingFaceBgeEmbeddings
-        from modules.load_vectorstore import PERSIST_DIR
+        from server.modules.load_vectorstore import PERSIST_DIR
 
         vectorstore=Chroma(
             persist_directory=PERSIST_DIR,
