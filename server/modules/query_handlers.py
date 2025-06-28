@@ -1,4 +1,4 @@
-from logger import logger
+from server.logger import logger
 
 
 
