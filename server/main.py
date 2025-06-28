@@ -43,8 +43,8 @@ async def upload_pdfs(files:List[UploadFile]=File(...)):
 async def ask_quyestion(question:str=Form(...)):
     try:
         logger.info("fuser query:{question}")
-        from langchain.vectorstores import Chroma
-        from langchain.embeddings import HuggingFaceBgeEmbeddings
+        from langchain_community.vectorstores import Chroma
+        from langchain_community.embeddings import HuggingFaceBgeEmbeddings
         from modules.load_vectorstore import PERSIST_DIR
 
         vectorstore=Chroma(
