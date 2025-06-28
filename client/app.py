@@ -1,7 +1,7 @@
 import streamlit as st
-from client.components.upload import render_uploader
-from client.components.history_download import render_history_download
-from client.components.chatUI import render_chat
+from components.upload import render_uploader
+from components.history_download import render_history_download
+from components.chatUI import render_chat
 
 
 
