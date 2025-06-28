@@ -33,3 +33,6 @@ aiofiles
 
 python-multipart
 # pip install -r requirements.txt
+
+streamlit
+requests
